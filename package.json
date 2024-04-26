@@ -5,8 +5,9 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node dist/index.js",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
     "build": "tsc",
     "tsc": "tsc --watch"
   },
@@ -15,9 +16,12 @@
   "license": "ISC",
   "devDependencies": {
     "@eslint/js": "^9.0.0",
+    "@jest/globals": "^29.7.0",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
+    "jest": "^29.7.0",
     "prettier": "^3.2.5",
+    "ts-jest": "^29.1.2",
     "typescript": "^5.4.5",
     "typescript-eslint": "^7.7.0"
   }
