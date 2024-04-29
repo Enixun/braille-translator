@@ -6,7 +6,7 @@ interface BrailleState {
   capital: boolean;
 }
 
-function printToUEB(s: string) {
+export function printToUEB(s: string) {
   const braille: string[] = [];
   let word: string[] = [];
   const state: BrailleState = {
@@ -56,11 +56,9 @@ function printCharToUEB(c: string, s: BrailleState): string {
     return codePoint === 44 ? "1" : "4";
   }
   if (s.numeric) s.numeric = false;
-  if (codePoint >= 97 && codePoint <= 120) {
+  if (codePoint >= 97 && codePoint <= 122) {
     // lowercase standard alphabet
     return String.fromCodePoint(codePoint - 32);
   }
   return "*";
 }
-
-console.log(printToUEB("hello world 123402"));
