@@ -2,5 +2,13 @@
 export default {
   preset: "ts-jest",
   testEnvironment: "node",
-  coverageDirectory: "./test-reports",
+  // transform: { "\\.[jt]sx?$": ["ts-jest", { useESM: true }] },
+  moduleNameMapper: {
+    "^(\\.\\.?\\/.+)\\.js$": "$1",
+  },
+  // coverageDirectory: "./test-reports",
+  // globals: {
+  //   // "ts-jest": { diagnostics: false }
+  //   moduleNameMapper:
+  // },
 };
